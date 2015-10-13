@@ -6,11 +6,18 @@ import hudson.plugins.javancss.parser.Statistic;
 import org.jenkinsci.plugins.codehealth.provider.loc.LinesOfCode;
 import org.jenkinsci.plugins.codehealth.provider.loc.LinesOfCodeDescriptor;
 import org.jenkinsci.plugins.codehealth.provider.loc.LinesOfCodeProvider;
+import org.kohsuke.stapler.DataBoundConstructor;
 
 /**
  * @author Michael Prankl
  */
 public class JavaNCSSLinesOfCodeProvider extends LinesOfCodeProvider {
+
+    @DataBoundConstructor
+    public JavaNCSSLinesOfCodeProvider() {
+
+    }
+
     @Override
     public LinesOfCode getLOC(AbstractBuild<?, ?> build) {
         JavaNCSSProjectIndividualReport report = build.getAction(JavaNCSSProjectIndividualReport.class);
