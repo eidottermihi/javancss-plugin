@@ -20,7 +20,7 @@ public class JavaNCSSLinesOfCodeProvider extends LinesOfCodeProvider {
 
     @Override
     public LinesOfCode getLOC(AbstractBuild<?, ?> build) {
-        JavaNCSSProjectIndividualReport report = build.getAction(JavaNCSSProjectIndividualReport.class);
+        JavaNCSSBuildIndividualReport report = build.getAction(JavaNCSSBuildIndividualReport.class);
         if (report != null) {
             Statistic totals = report.getTotals();
             if (totals != null) {
