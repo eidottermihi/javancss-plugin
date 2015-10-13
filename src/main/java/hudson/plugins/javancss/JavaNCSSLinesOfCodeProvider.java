@@ -41,6 +41,14 @@ public class JavaNCSSLinesOfCodeProvider extends LinesOfCodeProvider {
         return super.getDescriptor();
     }
 
+    public String getBuildResultUrl() {
+        return PluginImpl.URL;
+    }
+
+    public String getProjectResultUrl() {
+        return PluginImpl.URL;
+    }
+
     @Extension
     public static class DescriptorImpl extends LinesOfCodeDescriptor {
 
